@@ -12,8 +12,10 @@ window.addEventListener('click', (e) => {
     }
 
     if (e.target.dataset.action === 'minus') {
-        if (counter.innerText > 1) {
+        if (parseInt(counter.innerText) > 1) {
             counter.innerText = --counter.innerText;
+        } else if (e.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
+            e.target.closest('.cart-item').remove();
         }
     }
 
