@@ -16,6 +16,9 @@ window.addEventListener('click', (e) => {
             counter.innerText = --counter.innerText;
         } else if (e.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
             e.target.closest('.cart-item').remove();
+
+            //  Отображение статуса корзины Пустая / Полная
+            toggleCartstatus();
         }
     }
 

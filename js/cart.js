@@ -57,9 +57,13 @@ window.addEventListener('click', (e) => {
             `;
 
             cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+
         }    
 
         card.querySelector('[data-counter]').innerText = '1';
+
+        //  Отображение статуса корзины Пустая / Полная
+        toggleCartstatus();
     }
     
 }); 
