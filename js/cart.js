@@ -64,6 +64,10 @@ window.addEventListener('click', (e) => {
 
         //  Отображение статуса корзины Пустая / Полная
         toggleCartstatus();
+
+        // Пересчет общей стоимости товаров в корзине
+
+        calcCartPrice();
     }
     
 }); 

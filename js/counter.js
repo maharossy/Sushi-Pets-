@@ -19,7 +19,16 @@ window.addEventListener('click', (e) => {
 
             //  Отображение статуса корзины Пустая / Полная
             toggleCartstatus();
+
+            // Пересчет общей стоимости товаров в корзине
+            calcCartPrice();
         }
+    }
+
+    // Проверяем клин на + или - внутри корзины
+
+    if (e.target.hasAttribute('data-action') && e.target.closest('.cart-wrapper')) {
+        calcCartPrice();
     }
 
 });
