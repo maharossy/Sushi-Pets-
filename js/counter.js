@@ -21,14 +21,14 @@ window.addEventListener('click', (e) => {
             toggleCartstatus();
 
             // Пересчет общей стоимости товаров в корзине
-            calcCartPrice();
+            calcCartPriceAndDelivery();
         }
     }
 
     // Проверяем клин на + или - внутри корзины
 
     if (e.target.hasAttribute('data-action') && e.target.closest('.cart-wrapper')) {
-        calcCartPrice();
+        calcCartPriceAndDelivery();
     }
 
 });
